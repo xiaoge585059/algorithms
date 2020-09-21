@@ -106,9 +106,56 @@ void test_random() {
 	}
 }
 
+/* 删除有序数组中的重复元素 */
+int* drop_dulicated_elements(int a[], int a_len) {
+	int count = 1;
+	for (int i = a_len - 1; i > 0; --i) {
+		if (a[i] != a[i - 1]) {
+			count++;
+		}
+	}
+
+	int* a_result = new int[count] { 0 };
+	for (int i = a_len - 1; i > 0; --i) {
+		if (a[i] != a[i - 1]) {
+			a_result[--count] = a[i];
+		}
+	}
+
+	return a_result;
+}
+
+void test_drop_dulicated_elements() {
+	int a[20] = { 0, 1, 1, 2, 3, 4, 4, 4, 5, 6, 7, 7, 7, 7, 7, 7, 7, 8, 9, 9 };
+	int* b = drop_dulicated_elements(a, 20);
+	print_array(b, 10);
+
+	delete[] b;
+}
+
 /**
- * 测试
+ * 判断 s1 是否为 s2 的回环变位
+ *   如果字符串 s1 中的字符循环移动任意位置之后能够得到另一个字符串 s2
+ *   那么 s1 就被称为 s2 的回环变位
+ * 返回值：
+ *   -1: s1 不是 s2 的回环变位
+ *   result = [0, s1.length - 1]: s1 循环移动 result 位之后得到 s2
  */
+int circular_rotation(string s1, string s2) {
+	// string.find() 返回值为无符号整型，需转换成 int 类型
+	return (s1.length() == s2.length()) && ((int)(s1 + s1).find(s2) >= 0);
+}
+
+/* 测试 circular_rotation 函数 */
+void test_circular_rotation() {
+	cout << circular_rotation("ACTGACG", "TGACGAC") << endl;
+	cout << circular_rotation("ACTGACG", "TGACGA") << endl;
+	cout << circular_rotation("ACTGACG", "TGACGTC") << endl;
+}
+
+
+/* 测试 */
+/*
 int main() {
 	// cout << gcd(123, 9) << endl;  // 测试 gcd 函数
 	// 测试 binary_search 和 binary_search_recursion 函数
@@ -120,6 +167,8 @@ int main() {
 	// cout << binary_search_recursion(11, a, a_len) << endl;
 
 	// test_random();  // 测试 my_random
+	// test_drop_dulicated_elements();
+	test_circular_rotation();
 
 	return 0;
-}
+} //*/

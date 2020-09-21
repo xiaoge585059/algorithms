@@ -30,6 +30,15 @@
     <ClCompile Include="my_random.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="infix_to_postfix.cpp">
+      <Filter>源文件\chapter1</Filter>
+    </ClCompile>
+    <ClCompile Include="union_find.cpp">
+      <Filter>源文件\chapter1</Filter>
+    </ClCompile>
+    <ClCompile Include="insertion.cpp">
+      <Filter>源文件\chapter2</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="tools.h">

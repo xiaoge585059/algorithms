@@ -140,8 +140,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="chapter1.cpp" />
+    <ClCompile Include="infix_to_postfix.cpp" />
+    <ClCompile Include="insertion.cpp" />
     <ClCompile Include="my_random.cpp" />
     <ClCompile Include="tools.cpp" />
+    <ClCompile Include="union_find.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="my_random.h" />
