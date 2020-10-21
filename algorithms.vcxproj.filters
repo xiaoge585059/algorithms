@@ -39,6 +39,18 @@
     <ClCompile Include="insertion.cpp">
       <Filter>源文件\chapter2</Filter>
     </ClCompile>
+    <ClCompile Include="shell_sort.cpp">
+      <Filter>源文件\chapter2</Filter>
+    </ClCompile>
+    <ClCompile Include="merge_sort.cpp">
+      <Filter>源文件\chapter2</Filter>
+    </ClCompile>
+    <ClCompile Include="quick_sort.cpp">
+      <Filter>源文件\chapter2</Filter>
+    </ClCompile>
+    <ClCompile Include="max_heap.cpp">
+      <Filter>源文件\chapter2</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="tools.h">

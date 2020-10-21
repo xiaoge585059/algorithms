@@ -86,3 +86,13 @@ void shuffle(double a[], int a_len) {
 		a[r] = temp;
 	}
 }
+
+void shuffle(int a[], int a_len) {
+	for (int i = 0; i < a_len; ++i) {
+		// 将 a[i] 和 a[i..a_len-1] 中任意一个元素交换
+		int r = i + uniform(a_len - i);
+		int temp = a[i];
+		a[i] = a[r];
+		a[r] = temp;
+	}
+}

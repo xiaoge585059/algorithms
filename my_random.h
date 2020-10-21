@@ -56,3 +56,5 @@ int discrete(double a[], int a_len);
  * @param a_len, int, 数组长度
  */
 void shuffle(double a[], int a_len);
+
+void shuffle(int a[], int a_len);
